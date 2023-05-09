@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from './filter.module.css';
 
 const Filter = ({ value, onChange }) => {
@@ -6,4 +7,10 @@ const Filter = ({ value, onChange }) => {
         <input type="text" onChange={onChange} value={value} />
     </div>
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default Filter;
