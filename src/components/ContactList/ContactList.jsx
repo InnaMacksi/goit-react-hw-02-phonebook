@@ -1,4 +1,4 @@
-import Contacts from "components/Contacts/Contacts";
+import ContactItem from "components/ContactItem/ContactItem";
 import PropTypes from "prop-types";
 
 import styles from './contactList.module.css';
@@ -6,7 +6,7 @@ import styles from './contactList.module.css';
 const ContactList = ({contacts, onDelete}) => {
     return <ul className={styles.list}>
         {contacts.map(contact => {
-            return <li key={contact.id}><Contacts contact={contact} onDelete={onDelete}/></li>
+            return <ContactItem key={contact.id} contact={contact} onDelete={onDelete}/>
       })}
   </ul>  
 }
